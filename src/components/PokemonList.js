@@ -35,6 +35,7 @@ const styles = StyleSheet.create({
   flatListContentContainer: {
     paddingHorizontal: 15,
     marginTop: Platform.OS === "android" ? 15 : 0,
+    paddingBottom: Platform.OS === "android" ? 20: 0
   },
   spinner:{
     marginTop:20,

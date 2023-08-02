@@ -11,7 +11,7 @@ const Tab  = createBottomTabNavigator();
 
 export default function navigation() {
   return (
-  <Tab.Navigator 
+  <Tab.Navigator initialRouteName="Pokedex"
   initialRouteName="Pokedex"
   screenOptions={{headerShown:false}}
   >

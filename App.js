@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { StyleSheet, Text, View,SafeAreaView } from 'react-native';
 import Navigation from './src/navigation/navigation';
 import {NativeModules} from 'react-native';
+import { AuthProvider } from './src/context/AuthContext';
 
 const {StatusBarManager} = NativeModules;
 const height = StatusBarManager.HEIGHT;
@@ -12,7 +13,9 @@ export default function App() {
     <SafeAreaView style={styles.container}>
       <View style={styles.content}>
         <NavigationContainer>
+          <AuthProvider>
           <Navigation />
+          </AuthProvider>
         </NavigationContainer>
       </View>
     </SafeAreaView>
